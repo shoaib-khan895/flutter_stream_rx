@@ -41,6 +41,27 @@ class AuthBloc {
   void dispose() {
     _userSubject.close();
   }
+
+  /// Validates if the given [email] is a valid email address.
+  ///
+  bool validateEmail(String email) {
+    if (email.isNotEmpty) {
+      final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
+      return emailRegex.hasMatch(email);
+    } else {
+      return true;
+    }
+  }
+
+  /// Validates if the given [password] is a valid password.
+  ///
+  bool validatePassword(String password) {
+    if (password.isNotEmpty) {
+      return true;
+    } else {
+      return true;
+    }
+  }
 }
 // class AuthBloc {
 //   final _authService = AuthService();

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stream_rx/rx_dart/screen/home_screen.dart';
-import 'package:rxdart/rxdart.dart';
 
 void main() {
   // 1️⃣ PublishSubject – Emits only new items to subscribers.
@@ -25,15 +24,15 @@ void main() {
 //  subject.close();
 
   ///BehaviorSubject.
-  final subject = BehaviorSubject<int>.seeded(100); // Initial value
-
-  subject.listen((value) => print("Listener 1: $value"));
-
-  subject.add(200);
-
-  subject.listen((value) => print("Listener 2: $value"));
-  subject.add(100);
-  subject.close();
+  // final subject = BehaviorSubject<int>.seeded(100); // Initial value
+  //
+  // subject.listen((value) => print("Listener 1: $value"));
+  //
+  // subject.add(200);
+  //
+  // subject.listen((value) => print("Listener 2: $value"));
+  // subject.add(100);
+  // subject.close();
 
   ///ReplaySubject.
   // final subject = ReplaySubject<int>();
@@ -57,7 +56,7 @@ void main() {
   //
   // subject.close();
 
-  // runApp(MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

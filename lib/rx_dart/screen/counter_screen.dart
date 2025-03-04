@@ -21,7 +21,12 @@ class _CounterScreenState extends State<CounterScreen> {
           builder: (context, snapshot) {
             return Text(
               'Count: ${snapshot.data}',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.5,
+                  wordSpacing: 2.0),
             );
           },
         ),
